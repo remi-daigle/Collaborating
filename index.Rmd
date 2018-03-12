@@ -1,0 +1,69 @@
+---
+title: "Simple Github Collaboration"
+output: html_document
+---
+
+GitHub has a ton of useful features that are great for online collaboration. This breadth of features may be intimidating to beginners and unless there is a large team working on the same files (scripts, documents, etc) at the same time many features are unnecessary! 
+
+**Objective:** This short tutorial is intended to provide enough guidance to allow new users with no previous GitHub experience to edit files in a GitHub [repository](#repository).
+
+# Definitions:
+
+## Repository
+
+A set of files being tracked by the version control system, Git, in a project folder (*i.e.* directory). Since this folder and it's contents are being tracked, the folder is known as a repository or often repo for short. A repository may be stored locally on your machine, or in the cloud (*e.g.* GitHub)
+
+## Git
+
+[Git](https://git-scm.com/) is a version control system. Think of it as "track changes" that works on an entire project folder (*i.e.* a [repository](#repository)) and sub-folders. This is typically used on your local machine (*e.g.* laptop) and can be used independant of GitHub.
+
+## GitHub
+
+[GitHub](https://github.com/) is a collaboration platform. Think of this as cloud storage for entire project folders (*i.e.* a [repository](#repository)) built around using Git for version control.
+
+## Commit
+
+A "Commit" is a set of saved changes that were made to a repository. It's like hitting the save button on the entire repository and the version control system allows you to see the state of the files at any point when changes had been "commited". It's advisable to commit frequently, and include helpful messages like "edited paragraph x for clarity", or "added log transform step to abundance data".
+
+
+# Get a GitHub account
+
+- sign up for a [GitHub](https://github.com/join) account
+- (optional) get free upgraded account with free private repositories with the [education discount](https://education.github.com/discount_requests/new)
+
+![via xkcd](https://imgs.xkcd.com/comics/git_commit.png)
+
+# Collaborating in the cloud
+
+This method is ideal if your intention is to edit files in a repository, without needing to run scripts, compile, etc.
+
+This assumes you already have collaborator (or owner) access to a repository. If you don't have access, you should ask the owner of the repository on which you wish to collaborate for access, or you can [create your own repository](https://help.github.com/articles/create-a-repo/).
+
+Go to your [GitHub Dashboard](https://github.com/dashboard) (login to GitHub if you haven't done so). On the right, you will see a panel called "Your Repositories" which lists the repositories to which you have editing access. Click on one of them.
+
+You will see a list of files contained in the repository, click on one of the files you wish to edit. On the top right of the file contents you will see a pencil icon, click to edit. Once you are happy with your changes, scroll to the bottom of the file to the "Commit changes" zone. Here you can add a helpful title and message associated with your changes. Then you can choose to commit directly to the "master" branch (or whatever the default name may be) or you can create a pull request. Committing directly to the master branch will change the files in the main repository immediately. Creating a pull request will create an alternate version of the repository (*i.e.* a branch) that the owner can choose to accept into the main repository if appropriate.
+
+That's all there is to it!
+
+# Collaborating from your hard drive
+
+This method is appropriate if you need to do a bit more heavy lifting (*e.g.* running scripts locally, changing more than 1 file at a time, etc).
+
+This assumes you already have collaborator (or owner) access to a repository. If you don't have access, you should ask the owner of the repository on which you wish to collaborate for access, or you can [create your own repository](https://help.github.com/articles/create-a-repo/).
+
+## Installing a Git client
+
+To facilitate the interaction between your machine and the GitHub website, you need some software to "pull" changes down to your machine from GitHub, "push" your changes from your machine to GitHub, or "sync" changes back and forth.
+
+My favorite for beginners and for my own everyday use is the [GitHub Desktop App](https://desktop.github.com/). Others may prefer more convienent options like doing it all directly in [RStudio](https://www.r-bloggers.com/rstudio-and-github/), or more powerful options such as [GitKraken](https://www.gitkraken.com/) or [Sourcetree](https://www.atlassian.com/software/sourcetree). These apps all allow you to do the basics of commiting changes to a repository and "push"/"pull", or "sync" your files to those on GitHub
+
+GitHub's own [tutorial](https://help.github.com/desktop/guides/)'s for getting started with the app and collaborating with the app are quite excellent. I recommend you check them out, but if you want to go at it alone, here are a few points to remember:
+
+- To get your repo downloaded, go to that repo's website and click on the green "Clone or download" button and click "Open in Desktop". If properly configured, you desktop client should allow you to select where on your hard drive to save the repo.
+- Your local files **DO NOT** automatically sync to GitHub, you need to "sync" or "push" your commited changes to GitHub manually.
+- Always "sync" or "pull" from GitHub **BEFORE** you start working since your collaborators may have updated some files on GitHub and you want the latest version on your computer.
+- Always commit your changes before "sync" or "pull" if you would like to keep them. Un-commited changes can be erased if someone else changed those files on GitHub.
+
+Ignoring the above can result in a conflict, those are not fun! Sometimes they can be delt with automatically, but typically this involves looking line by line at the conflicting lines and choosing which to keep. Or alternatively, deleting the repository and downloading a 'fresh' copy from GitHub!
+
+![via xkcd](https://imgs.xkcd.com/comics/git.png)
