@@ -1,6 +1,10 @@
 ---
 title: "Simple Github Collaboration"
-output: html_document
+output: 
+  html_document: 
+    number_sections: yes
+    toc: yes
+    toc_float: yes
 ---
 
 GitHub has a ton of useful features that are great for online collaboration. This breadth of features may be intimidating to beginners and unless there is a large team working on the same files (scripts, documents, etc) at the same time many features are unnecessary! 
